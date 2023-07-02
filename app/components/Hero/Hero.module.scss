@@ -1,0 +1,60 @@
+.hero {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-inline: 4rem;
+    margin-top: 3.2rem;
+  }
+
+  &__title {
+    position: absolute;
+    top: 50%;
+    left: 4rem;
+
+    width: calc(100% - 8rem);
+    transform: translateY(-50%);
+
+    margin-bottom: 8rem;
+    display: grid;
+    grid-template-columns: max-content 1fr max-content;
+    align-items: center;
+    gap: 3.2rem;
+
+    font-size: 16rem;
+  }
+
+  &__line {
+    display: inline-block;
+    height: 0.4rem;
+    width: 100%;
+    background-color: black;
+    transform: scaleX(0);
+    transform-origin: center center;
+  }
+
+  &__image {
+    overflow: hidden;
+    position: absolute;
+    bottom: -10vh;
+    left: 0;
+    width: 100%;
+    transform-origin: top center;
+  }
+
+  &__imageOverlay {
+    position: absolute;
+    inset: 0;
+    z-index: 3;
+    background-color: black;
+    transform: scaleY(0.31);
+    transform-origin: bottom center;
+  }
+}
